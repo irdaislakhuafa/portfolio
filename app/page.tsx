@@ -56,8 +56,8 @@ export default function Home() {
       name: "Ridho Pujiono",
       image: `/ridho_pujiono.jpg${imgQueries}`,
       description: "Fullstack Developer with 5 years of experience specializing in Laravel and React.js",
-      github: "",
-      linkedin: "",
+      github: "https://github.com/ridhopujiono",
+      linkedin: "https://www.linkedin.com/in/ridho-pujiono/",
       skills: {
         backend: ["Laravel"],
         frontend: ["React.js"],
@@ -69,8 +69,8 @@ export default function Home() {
       name: "Irda Islakhu Afa",
       image: `/irda_islakhu_afa1.jpg${imgQueries}`,
       description: "An Software Engineer with 3 years of experience specializing in Go and Java.",
-      github: "",
-      linkedin: "",
+      github: "https://github.com/irdaislakhuafa",
+      linkedin: "https://www.linkedin.com/in/irda-islakhu-afa/",
       skills: {
         backend: ["Go", "Java", "Nest.js (TypeScript)"],
         frontend: ["Next.js"],
@@ -84,49 +84,49 @@ export default function Home() {
             "Built with Next.js, TypeScript, Stripe, and PostgreSQL. Features include user authentication, product management, cart functionality, and order processing.",
           image: "/placeholder.svg?height=200&width=400",
         },
-        {
-          title: "Task Management App",
-          description: "A collaborative project management tool for teams",
-          details:
-            "Built with React, Node.js, Express, and MongoDB. Features include task creation, assignment, progress tracking, and team collaboration tools.",
-          image: "/placeholder.svg?height=200&width=400",
-        },
-        {
-          title: "Real-time Chat Application",
-          description: "A messaging platform with real-time updates",
-          details:
-            "Built with Vue.js, Socket.io, Express, and Firebase. Features include real-time messaging, user presence indicators, and file sharing.",
-          image: "/placeholder.svg?height=200&width=400",
-        },
-        {
-          title: "Fitness Tracking App",
-          description: "A personal fitness and workout tracking application",
-          details:
-            "Built with React Native, GraphQL, and MongoDB. Features include workout logging, progress tracking, and personalized workout recommendations.",
-          image: "/placeholder.svg?height=200&width=400",
-        },
-        {
-          title: "Content Management System",
-          description: "A custom CMS for digital content creators",
-          details:
-            "Built with Next.js, TypeScript, and Sanity.io. Features include content creation, publishing workflow, and media management.",
-          image: "/placeholder.svg?height=200&width=400",
-        },
-        {
-          title: "Analytics Dashboard",
-          description: "A data visualization platform for business metrics",
-          details:
-            "Built with React, D3.js, Node.js, and PostgreSQL. Features include interactive charts, data filtering, and automated reporting.",
-          image: "/placeholder.svg?height=200&width=400",
-        },
+        // {
+        //   title: "Task Management App",
+        //   description: "A collaborative project management tool for teams",
+        //   details:
+        //     "Built with React, Node.js, Express, and MongoDB. Features include task creation, assignment, progress tracking, and team collaboration tools.",
+        //   image: "/placeholder.svg?height=200&width=400",
+        // },
+        // {
+        //   title: "Real-time Chat Application",
+        //   description: "A messaging platform with real-time updates",
+        //   details:
+        //     "Built with Vue.js, Socket.io, Express, and Firebase. Features include real-time messaging, user presence indicators, and file sharing.",
+        //   image: "/placeholder.svg?height=200&width=400",
+        // },
+        // {
+        //   title: "Fitness Tracking App",
+        //   description: "A personal fitness and workout tracking application",
+        //   details:
+        //     "Built with React Native, GraphQL, and MongoDB. Features include workout logging, progress tracking, and personalized workout recommendations.",
+        //   image: "/placeholder.svg?height=200&width=400",
+        // },
+        // {
+        //   title: "Content Management System",
+        //   description: "A custom CMS for digital content creators",
+        //   details:
+        //     "Built with Next.js, TypeScript, and Sanity.io. Features include content creation, publishing workflow, and media management.",
+        //   image: "/placeholder.svg?height=200&width=400",
+        // },
+        // {
+        //   title: "Analytics Dashboard",
+        //   description: "A data visualization platform for business metrics",
+        //   details:
+        //     "Built with React, D3.js, Node.js, and PostgreSQL. Features include interactive charts, data filtering, and automated reporting.",
+        //   image: "/placeholder.svg?height=200&width=400",
+        // },
       ],
     },
     {
       name: "Miftahurrohman",
       image: `/miftahurrohman.jpg${imgQueries}`,
       description: "5 years of experience in the industrial world and am now switching to software development to follow my passion for technology",
-      github: "",
-      linkedin: "",
+      github: "https://github.com/mf-rohman",
+      linkedin: "https://www.linkedin.com/in/%E2%80%8E-miftahurrohman-717a12342/",
       skills: {
         backend: ["JavaScript"],
         frontend: ["React.js"],
@@ -281,7 +281,7 @@ export default function Home() {
                 {/* START: frontend */}
                 <TabsContent value="frontend" className="mt-6">
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-                    {devSkills.backend.map((skill, index) => (
+                    {devSkills.frontend.map((skill, index) => (
                       <motion.div
                         key={skill}
                         className="flex flex-col items-center justify-center p-4 bg-background rounded-lg shadow-sm"
@@ -392,7 +392,7 @@ export default function Home() {
           </AnimatedSection>
           {/* END: skills projects */}
 
-          {/* START: skills projects */}
+          {/* START: contact section */}
           {(
             // <AnimatedSection id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-muted/50">
             //   <div className="container px-4 md:px-6">
@@ -512,7 +512,7 @@ export default function Home() {
             // </AnimatedSection>
             ""
           )}
-          {/* END: skills projects */}
+          {/* END: contact sections */}
 
         </main>
         {/* END: section contents */}
