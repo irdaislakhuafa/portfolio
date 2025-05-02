@@ -102,7 +102,7 @@ export default function Home() {
         },
         {
           title: "Al-Inarah",
-          description: "Al-Inarah is a legal question and answer application that is fully supervised by Dr. Zulkilfii Mohamad Al-Bakri and researchers from Maktabah Al-Bakri.",
+          description: "Al-Inarah is a first legal question and answer application that is fully supervised by Dr. Zulkilfii Mohamad Al-Bakri and researchers from Maktabah Al-Bakri.",
           details: "Build with Laravel, React.js, Flutter, and MySQL. Features include e-commerce for e-books with seamless payment integration, legal question and answer, and legal consultation around islamic religion.",
           image: "https://play-lh.googleusercontent.com/0OzDzeN8r4lTZRUQ2ITstcrHP5NWpfdxbHr3hhBjw_YX0fuCiLttvcFIKugdasaAKTaS=w240-h480",
           link: {
@@ -356,8 +356,8 @@ export default function Home() {
                         <img
                           src={project.image || "/placeholder.svg"}
                           alt={project.title}
-                          className="w-full object-cover rounded-t-lg"
-                          // className="w-full h-48 object-cover rounded-t-lg"
+                          // className="w-full object-cover rounded-t-lg"
+                          className="w-full h-50 object-cover rounded-t-lg"
                         />
                         <CardTitle className="mt-4">{project.title}</CardTitle>
                         <CardDescription>{project.description}</CardDescription>
