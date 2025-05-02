@@ -14,13 +14,16 @@ import { ThemeToggle } from "@/components/theme-toggle"
 import { AnimatedSection } from "@/components/animated-section"
 import { AnimatedNavLink } from "@/components/animated-nav-link"
 import Navbar from "@/pages/home/navbar"
-import { Z_VERSION_ERROR } from "node:zlib"
 
 interface Project {
   title: string;
   description: string;
   details: string;
   image: string;
+  link: {
+    demo: string;
+    code: string;
+  }
 }
 
 interface DevSkill {
@@ -72,53 +75,41 @@ export default function Home() {
       github: "https://github.com/irdaislakhuafa",
       linkedin: "https://www.linkedin.com/in/irda-islakhu-afa/",
       skills: {
-        backend: ["Go", "Java", "Nest.js (TypeScript)"],
-        frontend: ["Next.js"],
-        others: ["Git", "Github", "Docker", "Linux"],
+        backend: ["Go", "Java (Spring Boot)", "TypeScript (NestJS)", "PHP (Laravel)"],
+        frontend: ["Next.js", "React.js", "HTML", "CSS", "JavaScript"],
+        others: ["Git", "Github", "GitLab", "Docker", "Linux", "Shell Script", "CI/CD"],
       },
       projects: [
         {
-          title: "E-commerce Platform",
-          description: "A full-featured online shopping platform with payment integration",
-          details:
-            "Built with Next.js, TypeScript, Stripe, and PostgreSQL. Features include user authentication, product management, cart functionality, and order processing.",
-          image: "/placeholder.svg?height=200&width=400",
+          title: "Anekapay - Modalin Toko Jualan",
+          description: "The only Modalin Store Sales application! All shops can get MULTIPLE PROFITS with Anekapay!",
+          details:"Your all-in-one shop solution. Built with Go, GraphQL API, RESTful API, Vue.js, and MySQL. Features include virtual product sales (credit, data, PLN, etc.), ticket and travel services, and wholesale product sourcing.",
+          image: "https://play-lh.googleusercontent.com/cubwkVT-2ud56oDP9CHoCW7Knpn0Mr-jUXzLOoZbT7I5RGyye160bmM83d0cYVdE7Q=w240-h480",
+          link: {
+            demo: "https://play.google.com/store/apps/details?id=com.anekapay.kiosaneka&pcampaignid=web_share",
+            code: "#",
+          },
         },
-        // {
-        //   title: "Task Management App",
-        //   description: "A collaborative project management tool for teams",
-        //   details:
-        //     "Built with React, Node.js, Express, and MongoDB. Features include task creation, assignment, progress tracking, and team collaboration tools.",
-        //   image: "/placeholder.svg?height=200&width=400",
-        // },
-        // {
-        //   title: "Real-time Chat Application",
-        //   description: "A messaging platform with real-time updates",
-        //   details:
-        //     "Built with Vue.js, Socket.io, Express, and Firebase. Features include real-time messaging, user presence indicators, and file sharing.",
-        //   image: "/placeholder.svg?height=200&width=400",
-        // },
-        // {
-        //   title: "Fitness Tracking App",
-        //   description: "A personal fitness and workout tracking application",
-        //   details:
-        //     "Built with React Native, GraphQL, and MongoDB. Features include workout logging, progress tracking, and personalized workout recommendations.",
-        //   image: "/placeholder.svg?height=200&width=400",
-        // },
-        // {
-        //   title: "Content Management System",
-        //   description: "A custom CMS for digital content creators",
-        //   details:
-        //     "Built with Next.js, TypeScript, and Sanity.io. Features include content creation, publishing workflow, and media management.",
-        //   image: "/placeholder.svg?height=200&width=400",
-        // },
-        // {
-        //   title: "Analytics Dashboard",
-        //   description: "A data visualization platform for business metrics",
-        //   details:
-        //     "Built with React, D3.js, Node.js, and PostgreSQL. Features include interactive charts, data filtering, and automated reporting.",
-        //   image: "/placeholder.svg?height=200&width=400",
-        // },
+        {
+          title: "BRI Ceria",
+          description: "Ceria is a Digital Lending by Bank BRI based on Android applications.",
+          details: "Ceria is a digital lending solution. Built with Go, RESTful API, Flutter, Vue.js, and PostgreSQL. Features include loan products with flexible installments, defined interest rates, and varying loan limits.",
+          image: "https://play-lh.googleusercontent.com/tpsB_EJ4_p3Ljh7LwhNWg6ysAH8GoDzDIcZwIWTP9SX1HsVjPflGP_iUK4IWGZOulDk=w240-h480",
+          link: {
+            demo: "https://play.google.com/store/apps/details?id=id.co.bri.ceria&pcampaignid=web_share",
+            code: "#",
+          },
+        },
+        {
+          title: "Al-Inarah",
+          description: "Al-Inarah is a legal question and answer application that is fully supervised by Dr. Zulkilfii Mohamad Al-Bakri and researchers from Maktabah Al-Bakri.",
+          details: "Build with Laravel, React.js, Flutter, and MySQL. Features include e-commerce for e-books with seamless payment integration, legal question and answer, and legal consultation around islamic religion.",
+          image: "https://play-lh.googleusercontent.com/0OzDzeN8r4lTZRUQ2ITstcrHP5NWpfdxbHr3hhBjw_YX0fuCiLttvcFIKugdasaAKTaS=w240-h480",
+          link: {
+            demo: "https://play.google.com/store/apps/details?id=com.maktabahalbakri.alinarah&pcampaignid=web_share",
+            code: "#",
+          },
+        }
       ],
     },
     {
@@ -340,7 +331,7 @@ export default function Home() {
           </AnimatedSection>
           {/* END: skills section */}
 
-          {/* START: skills projects */}
+          {/* START: projects section */}
           <AnimatedSection id="projects" className="w-full py-12 md:py-24 lg:py-32">
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -365,7 +356,8 @@ export default function Home() {
                         <img
                           src={project.image || "/placeholder.svg"}
                           alt={project.title}
-                          className="w-full h-48 object-cover rounded-t-lg"
+                          className="w-full object-cover rounded-t-lg"
+                          // className="w-full h-48 object-cover rounded-t-lg"
                         />
                         <CardTitle className="mt-4">{project.title}</CardTitle>
                         <CardDescription>{project.description}</CardDescription>
@@ -375,10 +367,10 @@ export default function Home() {
                       </CardContent>
                       <CardFooter className="flex justify-between">
                         <Button variant="outline" size="sm" asChild>
-                          <Link href="#">View Demo</Link>
+                          <Link href={project.link?.demo} target="_blank">View Demo</Link>
                         </Button>
                         <Button size="sm" asChild>
-                          <Link href="#">
+                          <Link href={project.link?.code} target="_blank">
                             <Github className="mr-2 h-4 w-4" />
                             Code
                           </Link>
@@ -390,7 +382,7 @@ export default function Home() {
               </div>
             </div>
           </AnimatedSection>
-          {/* END: skills projects */}
+          {/* END: projects section */}
 
           {/* START: contact section */}
           {(
