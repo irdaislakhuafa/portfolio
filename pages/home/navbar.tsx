@@ -25,7 +25,7 @@ export default function Navbar({ params }: NavbarParams) {
           <AnimatedNavLink href="#about">About</AnimatedNavLink>
           <AnimatedNavLink href="#skills">Skills</AnimatedNavLink>
           <AnimatedNavLink href="#projects">Projects</AnimatedNavLink>
-          <AnimatedNavLink href="#contact">Contact</AnimatedNavLink>
+          {/* <AnimatedNavLink href="#contact">Contact</AnimatedNavLink> */}
           <ThemeToggle />
         </nav>
       </div>
